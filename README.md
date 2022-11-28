@@ -9,14 +9,14 @@ De esta manera conseguimos usar todos los datos disponibles, haciendo una predic
 Es necesario crear una carpeta llamada 'out' en el directorio de trabajo para el correcto funcionamiento. En ella se almacenaran las salidas del programa
 ejecutado sin Docker.
 Para poder correr el programa hay que instalar los paquetes necesarios con sus correspondientes versiones. Se ejecutara el siguiente codigo en terminal:
->>>pip install -r requirements.txt
+>pip install -r requirements.txt
 ## Docker.
 Para lanzar la imagen de docker habrá que seguir los siguientes pasos:
 1. Crear la imagen: 
 - El punto indica que se cogen todos los archivos del directorio en el que nos encontramos. Podemos llamar a la imagen como queramos, teniendo en cuenta que al ejecutarla tendremos que usar ese nombre.
->>>docker build . -t 'Nombre Imagen'
+>docker build . -t 'Nombre Imagen'
 2. Una vez que tengamos la imagen creada tendremos que elegir un path absoluto del directorio al que queramos que se linkee el contenedor de docker
 para que podamos ver la salida del programa.
 - absolute_path = ['path del directorio de salida host']. En el caso en el que no exista el directorio que queremos linkear lo crea.
 - Es importante mantener la estructura del siguiente comando. En particular el path tras ':' no debera ser alterado ya que es el directorio interno del contenedor.
->>>docker run -v absolute_path:/out 'Nombre Imagen'
+>docker run -v absolute_path:/out 'Nombre Imagen'
