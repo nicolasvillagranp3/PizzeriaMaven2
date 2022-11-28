@@ -6,6 +6,8 @@ Este proyecto trata de obtener, a partir de una ETL que procesa una serie de ped
 - Pizza Id ausente: En este caso hemos cogido las 10 pizzas mas vendidas (haciendo la suposicion de que con el numero de datos limpios teniamos una idea de la distribucion de las pizzas suficiente)  y hemos rellenado de manera aleatoria los ausentes.
 De esta manera conseguimos usar todos los datos disponibles, haciendo una prediccion mucho mas robusta.
 ## Requirements.
+Es necesario crear una carpeta llamada 'out' en el directorio de trabajo para el correcto funcionamiento. En ella se almacenaran las salidas del programa
+ejecutado sin Docker.
 Para poder correr el programa hay que instalar los paquetes necesarios con sus correspondientes versiones. Se ejecutara el siguiente codigo en terminal:
 >>>pip install -r requirements.txt
 ## Docker.
